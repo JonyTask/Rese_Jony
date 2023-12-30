@@ -1,0 +1,152 @@
+
+.container{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+
+.left_container{
+    width:50%;
+}
+
+.right_container{
+    width:50%;
+}
+
+.title_section{
+    display:flex;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.back_page{
+    text-decoration:none;
+    display:inline-block;
+    text-align:center;
+    background:#fff;
+    height:20px;
+    width:20px;
+    padding:10px;
+    font-size:15px;
+    border-radius:5px;
+    box-shadow:3px 3px 1px rgba(0,0,0,.5);
+    color:#333;
+    font-weight:bold;
+    margin-right:25px;
+}
+
+.gourmet_title,
+.reserve_title{
+    margin:0;
+}
+
+.image_container{
+    width:100%;
+}
+
+.gourmet_image{
+    width:90%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+.tag_area{
+    margin:40px 0;
+}
+
+.tag_area,
+.gourmet_content_tag{
+    font-weight:bold;
+}
+
+.gourmet_content_tag{
+    width:90%;
+}
+
+.reserve_area{
+    width:85%;
+    margin:0 auto;
+}
+
+.reserve_area{
+    height:600px;
+    background:rgba(0,0,255,0.5);
+    border-radius:15px;
+    display:grid;
+    grid-template-rows: 6fr 1fr;
+}
+
+.reserve_upper{
+    grid-row: 1/2;
+    padding:0 30px;
+}
+
+.reserve_bottom{
+    grid-row: 2/3;
+}
+
+.reserve_title{
+    color:#fff;
+    margin:40px 0;
+}
+
+.reserve_input_area{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+.confirmation_header{
+    color:#fff;
+}
+
+.input_reserve_date,
+.select_reserve_time,
+.select_reserve_number{
+    border-radius:5px;
+    font-family:sans-serif;
+}
+
+.input_reserve_date,
+.select_reserve_time{
+    margin-bottom:10px;
+}
+
+.input_reserve_date{
+    width:40%;
+}
+
+.select_reserve_time,
+.select_reserve_number{
+    border-radius:5px;
+    width:80%;
+}
+
+.reserve_confirm{
+    background:rgba(255, 255, 255, 0.25);
+    border-radius:10px;
+    padding:20px;
+}
+
+.confirmation_detail{
+    padding-left:20px;
+    color:#fff;
+}
+
+.reserve_bottom{
+    background:#0000ff;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.reserve_submit{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:#fff;
+    font-size:20px;
+}

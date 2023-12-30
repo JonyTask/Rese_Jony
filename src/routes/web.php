@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GourmetController;
+use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\ReserveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/',[GourmetController::class,'ViewGourmets']);
+    Route::post('/favorite_gourmet',[FavoriteController::class,'ControlFavorite']);
+    Route::post('/gourmet_detail',[GourmetController::class,'ViewDetail']);
+    Route::post('/detail/reserve',[ReserveController::class,'ReservationDone']);
 });
