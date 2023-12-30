@@ -4,6 +4,27 @@
     <link rel="stylesheet" href="{{ asset('assets/css/gourmets.css') }}">
 @endsection
 
+@section('search')
+    <div class="search_area">
+        <form action="/gourmet_search" method="post" class="search_form">
+            @csrf
+            <select name="gourmet_area" class="area_select">
+                <option checked>All Area</option>
+                @foreach($areas as $area)
+                    <option value="{{ $area->id }}">{{ $area->gourmet_area }}</option>
+                @endforeach
+            </select>
+            <select name="gourmet_genre" class="genre_select">
+                <option checked>All Genre</option>
+                @foreach($genres as $genre)
+                    <option value="{{ $genre->id }}">{{ $genre->gourmet_genre }}</option>
+                @endforeach
+            </select>
+            <input type="text" class="gourmet_name_search" placeholder="Search...">
+        </form>
+    </div>
+@endsection
+
 @section('main')
     <div class="container">
         @foreach($gourmets as $gourmet)
