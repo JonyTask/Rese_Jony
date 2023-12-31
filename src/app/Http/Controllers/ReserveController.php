@@ -9,7 +9,6 @@ use App\Models\Reserve;
 class ReserveController extends Controller
 {
     public function ReservationDone(ReserveRequest $request){
-        //dd($request);
         Reserve::create([
             'user_id' => Auth::id(),
             'gourmet_id' => $request->gourmet_id,
