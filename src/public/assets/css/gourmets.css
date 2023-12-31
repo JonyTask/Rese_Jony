@@ -122,3 +122,9 @@
 	transform: rotate(45deg);
 	transform-origin: 100% 100%;
 }
+
+.heart_favorite_state::before,
+.heart_favorite_state::after
+{
+    background:#ff0000;
+}

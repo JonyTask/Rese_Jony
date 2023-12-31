@@ -43,7 +43,13 @@
                         <form action="/favorite_gourmet" method="post">
                             @csrf
                             <input type="hidden" name="gourmet_id" value="{{ $gourmet->id }}" readonly>
-                            <button type="submit" class="heart"></button>
+                            @php
+                                if(!in_array( $gourmet->id , $favorites_array) ){
+                                    echo "<button type='submit' class='heart'></button>";
+                                }else{
+                                    echo "<button type='submit' class='heart heart_favorite_state'></button>";
+                                }
+                            @endphp
                         </form>
                     </div>
                 </div>
