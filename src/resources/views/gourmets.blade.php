@@ -6,21 +6,23 @@
 
 @section('search')
     <div class="search_area">
-        <form action="/gourmet_search" method="post" class="search_form">
+        <form action="/gourmet_search" method="get" class="search_form">
             @csrf
             <select name="gourmet_area" class="area_select">
-                <option checked>All Area</option>
+                <option value="">All Area</option>
                 @foreach($areas as $area)
                     <option value="{{ $area->id }}">{{ $area->gourmet_area }}</option>
                 @endforeach
             </select>
             <select name="gourmet_genre" class="genre_select">
-                <option checked>All Genre</option>
+                <option value="">All Genre</option>
                 @foreach($genres as $genre)
                     <option value="{{ $genre->id }}">{{ $genre->gourmet_genre }}</option>
                 @endforeach
             </select>
-            <input type="text" class="gourmet_name_search" placeholder="Search...">
+            <input type="text" class="gourmet_name_input" name="gourmet_name" placeholder="Search..." autocomplete="off">
+            <button type="submit" class="scope_search_button">検索</button>
+            <a href="/" class="reset_link">リセット</a>
         </form>
     </div>
 @endsection

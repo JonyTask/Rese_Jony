@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GourmetController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,5 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/favorite_gourmet',[FavoriteController::class,'ControlFavorite']);
     Route::get('/gourmet_detail',[GourmetController::class,'ViewDetail']);
     Route::post('/detail/reserve',[ReserveController::class,'ReservationDone']);
+    Route::get('gourmet_search',[SearchController::class,'SearchScope']);
 });
