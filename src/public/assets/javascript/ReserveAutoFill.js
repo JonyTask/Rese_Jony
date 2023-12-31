@@ -7,11 +7,15 @@ reserve_date.addEventListener('blur',function(){
 const reserve_time = document.getElementById("time");
 reserve_time.addEventListener('blur',function(){
     const confirmation_time = document.getElementById("confirmation_time");
-    confirmation_time.textContent = this.value;
+    if(this.value != "選択してください"){
+        confirmation_time.textContent = this.value;
+    }
 });
 
 const reserve_number = document.getElementById("number");
 reserve_number.addEventListener('blur',function(){
     const confirmation_number = document.getElementById("confirmation_number");
-    confirmation_number.textContent = this.value + '人';
+    if(this.value != "選択してください"){
+        confirmation_number.textContent = this.value + '人';
+    }
 });
