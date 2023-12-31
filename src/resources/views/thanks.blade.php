@@ -12,3 +12,7 @@
         <a href="/" class="back_to_home">戻る</a>
     </div>
 @endsection
+
+@section('modal_link_first')
+    <a class="modal_hyperlink" href="/mypage">mypage</a>
+@endsection

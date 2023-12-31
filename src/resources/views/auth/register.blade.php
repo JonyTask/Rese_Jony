@@ -33,3 +33,7 @@
         </div>
     </div>
 @endsection
+
+@section('modal_link_first')
+    <a class="modal_hyperlink" href="/login">Login</a>
+@endsection

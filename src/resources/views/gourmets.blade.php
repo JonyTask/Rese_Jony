@@ -51,3 +51,15 @@
         @endforeach
     </div>
 @endsection
+
+@section('modal_link_first')
+    <a class="modal_hyperlink" href="/mypage">Mypage</a>
+@endsection
+
+@section('modal_link_second')
+    <a class="modal_hyperlink" href="/register">Registration</a>
+@endsection
+
+@section('modal_link_third')
+    <a class="modal_hyperlink" href="/login">Login</a>
+@endsection

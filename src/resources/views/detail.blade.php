@@ -105,3 +105,15 @@
     </div>
     <script src="{{ asset('assets/javascript/ReserveAutoFill.js') }}"></script>
 @endsection
+
+@section('modal_link_first')
+    <a class="modal_hyperlink" href="/">Home</a>
+@endsection
+
+@section('modal_link_second')
+    <a class="modal_hyperlink" href="/register">Registration</a>
+@endsection
+
+@section('modal_link_third')
+    <a class="modal_hyperlink" href="/login">Login</a>
+@endsection

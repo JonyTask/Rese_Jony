@@ -27,3 +27,7 @@
         </div>
     </div>
 @endsection
+
+@section('modal_link_first')
+    <a class="modal_hyperlink" href="/register">Register</a>
+@endsection
