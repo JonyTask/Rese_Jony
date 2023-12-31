@@ -22,5 +22,15 @@
         </div>
     </div>
     @yield('main')
+
+    <div class="modal">
+        <div class="modal_links">
+            @yield('modal_link_first')
+            @yield('modal_link_second')
+            @yield('modal_link_third')
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/javascript/modal.js') }}"></script>
 </body>
 </html>
