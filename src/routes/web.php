@@ -20,6 +20,6 @@ use App\Http\Controllers\ReserveController;
 Route::middleware(['auth'])->group(function () {
     Route::get('/',[GourmetController::class,'ViewGourmets']);
     Route::post('/favorite_gourmet',[FavoriteController::class,'ControlFavorite']);
-    Route::post('/gourmet_detail',[GourmetController::class,'ViewDetail']);
+    Route::get('/gourmet_detail',[GourmetController::class,'ViewDetail']);
     Route::post('/detail/reserve',[ReserveController::class,'ReservationDone']);
 });
