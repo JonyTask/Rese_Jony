@@ -31,7 +31,7 @@
                         <h2 class="reserve_title">予約</h2>
                         <div class="reserve_input_area">
                             <div class="date_error_and_input">
-                                <input class="input_reserve_date" type="date" name="reserve_date" id="date">
+                                <input class="input_reserve_date" type="date" name="reserve_date" id="date" value="{{ old('reserve_date') }}">
                                 <div class="error_message">
                                     @error('reserve_date')
                                         {{ $message }}
@@ -39,8 +39,8 @@
                                 </div>
                             </div>
                             <div class="time_error_and_select">
-                                <select class="select_reserve_time" name="reserve_time" id="time">
-                                    <option value="">選択してください</option>
+                                <select class="select_reserve_time" name="reserve_time" id="time" value="{{ old('reserve_time') }}">
+                                    <option value="" hidden>選択してください</option>
                                     <option value="17:00:00">17:00:00</option>
                                     <option value="18:00:00">18:00:00</option>
                                     <option value="19:00:00">19:00:00</option>
@@ -55,8 +55,8 @@
                                 </div>
                             </div>
                             <div class="number_error_and_select">
-                                <select class="select_reserve_number" name="reserve_number" id="number">
-                                    <option value="">選択してください</option>
+                                <select class="select_reserve_number" name="reserve_number" id="number" value="{{ old('reserve_number') }}">
+                                    <option value="" hidden>選択してください</option>
                                     <option value="1">1人</option>
                                     <option value="2">2人</option>
                                     <option value="3">3人</option>
