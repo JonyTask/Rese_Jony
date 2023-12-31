@@ -14,7 +14,7 @@
                 @csrf
                 <ul class="login_form_items">
                     <li class="login_form_item">
-                        <input type="email" class="Email_Input" placeholder="Email" name="email">
+                        <input type="email" class="Email_Input" placeholder="Email" name="email" value="{{ old('email')}}">
                     </li>
                     <li class="login_form_item">
                         <input type="password" class="Password_Input" placeholder="Password" name="password">
