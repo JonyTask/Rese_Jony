@@ -30,29 +30,50 @@
                     <div class="reserve_upper">
                         <h2 class="reserve_title">予約</h2>
                         <div class="reserve_input_area">
-                            <input class="input_reserve_date" type="date" name="reserve_date" id="date">
-                            <select class="select_reserve_time" name="reserve_time" id="time">
-                                <option hidden>選択してください</option>
-                                <option value="17:00:00">17:00:00</option>
-                                <option value="18:00:00">18:00:00</option>
-                                <option value="19:00:00">19:00:00</option>
-                                <option value="20:00:00">20:00:00</option>
-                                <option value="21:00:00">21:00:00</option>
-                                <option value="22:00:00">22:00:00</option>
-                            </select>
-                            <select class="select_reserve_number" name="reserve_number" id="number">
-                                <option hidden>選択してください</option>
-                                <option value="1">1人</option>
-                                <option value="2">2人</option>
-                                <option value="3">3人</option>
-                                <option value="4">4人</option>
-                                <option value="5">5人</option>
-                                <option value="6">6人</option>
-                                <option value="7">7人</option>
-                                <option value="8">8人</option>
-                                <option value="9">9人</option>
-                                <option value="10">10人</option>
-                            </select>
+                            <div class="date_error_and_input">
+                                <input class="input_reserve_date" type="date" name="reserve_date" id="date">
+                                <div class="error_message">
+                                    @error('reserve_date')
+                                        {{ $message }}
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="time_error_and_select">
+                                <select class="select_reserve_time" name="reserve_time" id="time">
+                                    <option value="">選択してください</option>
+                                    <option value="17:00:00">17:00:00</option>
+                                    <option value="18:00:00">18:00:00</option>
+                                    <option value="19:00:00">19:00:00</option>
+                                    <option value="20:00:00">20:00:00</option>
+                                    <option value="21:00:00">21:00:00</option>
+                                    <option value="22:00:00">22:00:00</option>
+                                </select>
+                                <div class="error_message">
+                                    @error('reserve_time')
+                                        {{ $message }}
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="number_error_and_select">
+                                <select class="select_reserve_number" name="reserve_number" id="number">
+                                    <option value="">選択してください</option>
+                                    <option value="1">1人</option>
+                                    <option value="2">2人</option>
+                                    <option value="3">3人</option>
+                                    <option value="4">4人</option>
+                                    <option value="5">5人</option>
+                                    <option value="6">6人</option>
+                                    <option value="7">7人</option>
+                                    <option value="8">8人</option>
+                                    <option value="9">9人</option>
+                                    <option value="10">10人</option>
+                                </select>
+                                <div class="error_message">
+                                    @error('reserve_number')
+                                        {{ $message }}
+                                    @enderror
+                                </div>
+                            </div>
                         </div>
                         <div class="reserve_confirm">
                             <table class="confirmation_table">
