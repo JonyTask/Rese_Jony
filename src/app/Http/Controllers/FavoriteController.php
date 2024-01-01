@@ -18,6 +18,6 @@ class FavoriteController extends Controller
         }else{
             Favorite::destroy($favorite_field->id);
         }
-        return redirect('/');
+        return back();
     }
 }
