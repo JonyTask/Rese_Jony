@@ -9,4 +9,8 @@ class Reserve extends Model
 {
     use HasFactory;
     protected $fillable = ['user_id','gourmet_id','reserve_date','reserve_time','number'];
+
+    public function gourmets(){
+        return $this->belongsTo(Gourmet::class,'gourmet_id');
+    }
 }
