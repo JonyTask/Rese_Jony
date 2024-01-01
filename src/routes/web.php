@@ -20,8 +20,9 @@ use App\Http\Controllers\SearchController;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/',[GourmetController::class,'ViewGourmets']);
-    Route::post('/favorite_gourmet',[FavoriteController::class,'ControlFavorite']);
-    Route::get('/gourmet_detail',[GourmetController::class,'ViewDetail']);
-    Route::post('/detail/reserve',[ReserveController::class,'ReservationDone']);
-    Route::get('gourmet_search',[SearchController::class,'SearchScope']);
+    Route::post('/AddFavorite',[FavoriteController::class,'ControlFavorite']);
+    Route::get('/Detail',[GourmetController::class,'ViewDetail']);
+    Route::post('/Detail/Reserve',[ReserveController::class,'ReservationDone']);
+    Route::get('Search',[SearchController::class,'SearchScope']);
+    Route::get('/Mypage',[GourmetController::class,'ViewMyPage']);
 });

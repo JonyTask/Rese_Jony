@@ -23,7 +23,7 @@
             </p>
         </div>
         <div class="right_container">
-            <form action="detail/reserve" method="post">
+            <form action="Detail/Reserve" method="post">
                 @csrf
                 <input name="gourmet_id" value="{{ $gourmet->id }}" type="hidden">
                 <div class="reserve_area">

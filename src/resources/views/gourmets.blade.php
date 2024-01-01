@@ -6,7 +6,7 @@
 
 @section('search')
     <div class="search_area">
-        <form action="/gourmet_search" method="get" class="search_form">
+        <form action="/Search" method="get" class="search_form">
             @csrf
             <select name="gourmet_area" class="area_select">
                 <option value="">All Area</option>
@@ -37,12 +37,12 @@
                     <span class="area_tag">#{{ $gourmet->areas->gourmet_area }}</span>
                     <span class="genre_tag">#{{ $gourmet->genres->gourmet_genre }}</span>
                     <div class="flex-area">
-                        <form class="view_detail" method="get" action="/gourmet_detail">
+                        <form class="view_detail" method="get" action="/Detail">
                             @csrf
                             <input type="hidden" name="gourmet_id" value="{{ $gourmet->id }}" readonly>
                             <button class="detail_button" type="submit">詳しく見る</button>
                         </form>
-                        <form action="/favorite_gourmet" method="post">
+                        <form action="/AddFavorite" method="post">
                             @csrf
                             <input type="hidden" name="gourmet_id" value="{{ $gourmet->id }}" readonly>
                             @php
@@ -61,7 +61,7 @@
 @endsection
 
 @section('modal_link_first')
-    <a class="modal_hyperlink" href="/mypage">Mypage</a>
+    <a class="modal_hyperlink" href="/Mypage">Mypage</a>
 @endsection
 
 @section('modal_link_second')
