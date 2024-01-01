@@ -33,7 +33,7 @@
             <div class="gourmet_card">
                 <img class="gourmet_image" src="assets/image/{{$gourmet->image_path}}">
                 <div class="gourmet_card_bottom">
-                    <p class="gourmet_name">{{ $gourmet->gourmet_name }}</p>
+                    <p class="gourmet_name">{{ $gourmet->name }}</p>
                     <span class="area_tag">#{{ $gourmet->areas->gourmet_area }}</span>
                     <span class="genre_tag">#{{ $gourmet->genres->gourmet_genre }}</span>
                     <div class="flex-area">

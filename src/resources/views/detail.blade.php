@@ -9,7 +9,7 @@
         <div class="left_container">
             <div class="title_section">
                 <a href="/" class="back_page">＜</a>
-                <h2 class="gourmet_title">{{ $gourmet->gourmet_name }}</h2>
+                <h2 class="gourmet_title">{{ $gourmet->name }}</h2>
             </div>
             <div class="image_container">
                 <img class="gourmet_image" src="assets/image/{{$gourmet->image_path}}">
@@ -79,7 +79,7 @@
                             <table class="confirmation_table">
                                 <tr class="confirmation_line">
                                     <th class="confirmation_header">Shop</th>
-                                    <td class="confirmation_detail">{{ $gourmet->gourmet_name }}</td>
+                                    <td class="confirmation_detail">{{ $gourmet->name }}</td>
                                 </tr>
                                 <tr class="confirmation_line">
                                     <th class="confirmation_header">Date</th>

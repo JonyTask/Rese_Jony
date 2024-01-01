@@ -15,9 +15,9 @@ class CreateGourmetsTable extends Migration
     {
         Schema::create('gourmets', function (Blueprint $table) {
             $table->id();
-            $table->string('gourmet_name',191);
             $table->foreignId('genre_id')->constrained()->onDelete('cascade');
             $table->foreignId('area_id')->constrained()->onDelete('cascade');
+            $table->string('name',191);
             $table->string('gourmet_content',300);
             $table->string('image_path',191);
             $table->timestamp('created_at')->useCurrent()->nullable();
