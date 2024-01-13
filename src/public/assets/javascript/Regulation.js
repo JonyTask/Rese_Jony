@@ -3,5 +3,5 @@ $(window).on("resize load",function(){
     const RightContainer = $(".right_container");
     const ContainerSet = RightContainer.offset();
 
-    NameRegulation.css({"margin-left":ContainerSet.left});
+    NameRegulation.css({"padding-left":ContainerSet.left});
 });
