@@ -9,6 +9,11 @@
     <div class="container">
         <div class="left_container">
             <h2 class="reserve_title">予約状況</h2>
+            @if (session('message'))
+                <div class="alert">
+                    {{ session('message') }}
+                </div>
+            @endif
             <div class="reserve_cards_area">
                 @php
                     $counts = 1;
@@ -16,7 +21,7 @@
                 @foreach($reserves as $reserve)
                     <div class="reserve_card">
                         <p class="reserve_number">予約{{ $counts }}</p>
-                        <span class="deny_introduction">☒</span>
+                        <a href="{{ route('delete.confirm',['reserve' => $reserve->id]) }}" class="deny_introduction">☒</a>
                         <table class="reserve_table">
                             <tr class="reserve_line">
                                 <th class="reserve_header">Shop</th>

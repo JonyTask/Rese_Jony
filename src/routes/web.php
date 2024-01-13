@@ -25,4 +25,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/Detail/Reserve',[ReserveController::class,'ReservationDone']);
     Route::get('Search',[SearchController::class,'SearchScope']);
     Route::get('/Mypage',[GourmetController::class,'ViewMyPage']);
+    Route::get('Mypage/Reserve/Delete/Confirmation',[ReserveController::class,'ReservationDeleteConfirm'])->name('delete.confirm');
+    Route::post('Mypage/Reserve/Delete',[ReserveController::class,'ReservationDelete']);
 });
