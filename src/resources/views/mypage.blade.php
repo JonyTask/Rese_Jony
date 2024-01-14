@@ -79,10 +79,21 @@
 @endsection
 
 
-@section('modal_link_first')
-    <a class="modal_hyperlink" href="/">Home</a>
-@endsection
-
-@section('modal_link_second')
-
-@endsection
+@if(Auth::check())
+    @section('modal_link_first')
+        <form action="/logout" method="post">
+            @csrf
+            <button type="submit" class="logout_button">Logout</button>
+        </form>
+    @endsection
+    @section('modal_link_second')
+        <a class="modal_hyperlink" href="/">Home</a>
+    @endsection
+@else
+    @section('modal_link_first')
+        <a class="modal_hyperlink" href="/register">Registration</a>
+    @endsection
+    @section('modal_link_second')
+        <a class="modal_hyperlink" href="/login">Login</a>
+    @endsection
+@endif

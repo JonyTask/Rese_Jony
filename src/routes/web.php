@@ -17,13 +17,13 @@ use App\Http\Controllers\SearchController;
 |
 */
 
+Route::get('/',[GourmetController::class,'ViewGourmets']);
+Route::get('/Detail',[GourmetController::class,'ViewDetail']);
+Route::get('Search',[SearchController::class,'SearchScope']);
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/',[GourmetController::class,'ViewGourmets']);
     Route::post('/AddFavorite',[FavoriteController::class,'ControlFavorite']);
-    Route::get('/Detail',[GourmetController::class,'ViewDetail']);
     Route::post('/Detail/Reserve',[ReserveController::class,'ReservationDone']);
-    Route::get('Search',[SearchController::class,'SearchScope']);
     Route::get('/Mypage',[GourmetController::class,'ViewMyPage']);
     Route::get('Mypage/Reserve/Delete/Confirmation',[ReserveController::class,'ReservationDeleteConfirm'])->name('delete.confirm');
     Route::post('Mypage/Reserve/Delete',[ReserveController::class,'ReservationDelete']);
