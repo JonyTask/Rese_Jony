@@ -29,6 +29,8 @@ class GourmetController extends Controller
     }
 
     public function ViewMyPage(){
+        $user = Auth::user();
+        $user_name = $user->name;
         $reserves = Reserve::where('user_id',Auth::id())->with('gourmets:id,name')->get();
 
         $gourmets = Gourmet::where(function($query){
@@ -37,6 +39,6 @@ class GourmetController extends Controller
             return $query->whereIn('gourmets.id',$favorites_array);
         })->with(['areas','genres'])->get();
 
-        return view('mypage',compact('reserves','gourmets'));
+        return view('mypage',compact('reserves','gourmets','user_name'));
     }
 }
