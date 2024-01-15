@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gourmet extends Model
 {
-    protected $fillable = ['genre_id','area_id'];
+    protected $fillable = ['name','genre_id','area_id'];
 
     public function areas(){
         return $this->belongsTo(Area::class,'area_id');
@@ -30,7 +30,7 @@ class Gourmet extends Model
 
     public function scopeKeywordSearch($query,$item){
         if($item){
-            return $query->where('gourmet_name','like','%'.$item.'%');
+            return $query->where('name','like','%'.$item.'%');
         }
     }
 }
