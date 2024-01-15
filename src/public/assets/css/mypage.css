@@ -41,6 +41,9 @@
     top:20px;
     right:30px;
     font-size:20px;
+    cursor:default;
+    text-decoration:none;
+    color:#fff;
 }
 
 .reserve_table{
