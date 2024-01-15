@@ -1,6 +1,6 @@
-*** Rese ***
+***Rese***
 
-** 環境構築方法 **
+**環境構築方法**
 
 1. git clone git@github.com:JonyTask/Rese_Jony.git
 2. docker-compose up -d --build
