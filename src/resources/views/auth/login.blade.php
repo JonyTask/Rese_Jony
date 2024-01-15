@@ -14,10 +14,20 @@
                 @csrf
                 <ul class="login_form_items">
                     <li class="login_form_item">
-                        <input type="email" class="Email_Input" placeholder="Email" name="email" value="{{ old('email')}}">
+                        <input type="email" class="Email_Input" placeholder="Email" name="email" value="{{ old('email')}}"><br>
+                        <p class="alert">
+                            @error('email')
+                                {{ $message }}
+                            @enderror
+                        </p>
                     </li>
                     <li class="login_form_item">
-                        <input type="password" class="Password_Input" placeholder="Password" name="password">
+                        <input type="password" class="Password_Input" placeholder="Password" name="password"><br>
+                        <p class="alert">
+                            @error('password')
+                                {{ $message }}
+                            @enderror
+                        </p>
                     </li>
                 </ul>
                 <div class="login_submit_area">

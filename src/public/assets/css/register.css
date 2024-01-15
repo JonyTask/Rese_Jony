@@ -1,0 +1,60 @@
+
+.register_form_area{
+    width:500px;
+    margin:150px auto 0 auto;
+    background:transparent;
+}
+
+.register_upper{
+    padding:15px;
+    background:#0000ff;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+}
+
+.form_title{
+    color:#f8f8ff;
+    margin:0;
+    font-weight:bold;
+}
+
+.register_under{
+    padding:20px;
+    background:#fff;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.register_form_items{
+    list-style:none;
+    padding:0;
+}
+
+.register_form_item{
+    padding-bottom:30px;
+}
+
+.Name_Input,
+.Email_Input,
+.Password_Input,
+.Confirmation_Input{
+    background:transparent;
+    border:none;
+    outline:none;
+    border-bottom:solid 1px #333;
+    width:100%;
+}
+
+.register_submit_area{
+    margin-top:20px;
+    text-align:right;
+}
+
+.register_submit_button{
+    border:none;
+    outline:none;
+    background:#0000ff;
+    border-radius:3px;
+    color:#fff;
+    padding:7px 10px;
+}

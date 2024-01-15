@@ -97,3 +97,18 @@
     font-size:25px;
     margin-bottom:20px;
 }
+
+.logout_button{
+    outline:none;
+    border:none;
+    background:transparent;
+    color:#0000ff;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.alert{
+    color:#ff0000;
+    font-weight:bold;
+    margin:0;
+}

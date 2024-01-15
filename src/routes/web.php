@@ -5,6 +5,7 @@ use App\Http\Controllers\GourmetController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReserveController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('Mypage/Reserve/Delete/Confirmation',[ReserveController::class,'ReservationDeleteConfirm'])->name('delete.confirm');
     Route::post('Mypage/Reserve/Delete',[ReserveController::class,'ReservationDelete']);
 });
+
+Route::post('/register',[AuthController::class,'store']);
