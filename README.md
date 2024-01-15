@@ -11,5 +11,5 @@
 7. php artisan migrate:fresh
 8. php artisan db:seed
 
-** ER図 **
+**ER図**
 <img src="ER.drawio.png">
