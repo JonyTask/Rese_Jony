@@ -9,6 +9,7 @@ use Illuminate\Auth\Events\Registered;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\AdminRequest;
 
 class AuthController extends Controller
 {
@@ -32,5 +33,17 @@ class AuthController extends Controller
         $this->guard->login($user);
 
         return app(RegisterResponse::class);
+    }
+
+    public function viewAdminLogin(){
+        return view('auth.adminLogin');
+    }
+
+    public function AdminStoreAuth(AdminRequest $request){
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        return redirect()->intended(route(/* 管理者ルーティング */));
     }
 }

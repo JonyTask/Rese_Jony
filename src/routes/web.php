@@ -31,3 +31,10 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::post('/register',[AuthController::class,'store']);
+
+Route::get('/admin_login',[AuthController::class,'viewAdminLogin'])->name('admin.login');
+Route::post('/admin_login',[AuthController::class, 'AdminStoreAuth']);
+
+Route::middleware('auth:admin')->group(function () {
+    //管理者ルーティング
+});
