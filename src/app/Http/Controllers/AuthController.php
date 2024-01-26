@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Laravel\Fortify\Contracts\CreatesNewUsers;
+use Illuminate\Http\Request;
 use Laravel\Fortify\Fortify;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
 use Laravel\Fortify\Contracts\RegisterResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\AdminRequest;
@@ -41,9 +44,15 @@ class AuthController extends Controller
 
     public function AdminStoreAuth(AdminRequest $request){
         $request->authenticate();
-
         $request->session()->regenerate();
+        return redirect()->intended(route('admin.auth_complete'));
+    }
 
-        return redirect()->intended(route(/* 管理者ルーティング */));
+    public function DestroyAdmin(Request $request): RedirectResponse
+    {
+        Auth::guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/admin_login');
     }
 }
