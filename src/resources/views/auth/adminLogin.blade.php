@@ -5,9 +5,6 @@
 @endsection
 
 @section('main')
-@foreach ($errors->all() as $error)
-  <li>{{$error}}</li>
-@endforeach
     <div class="login_form_area">
         <div class="login_upper">
             <p class="form_title">管理者　Login</p>

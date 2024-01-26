@@ -6,6 +6,7 @@ use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReserveController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +33,11 @@ Route::middleware(['auth'])->group(function () {
 
 Route::post('/register',[AuthController::class,'store']);
 
+/* ---------- 管理者認証ルーティング -------------------------------------------------------------------------------------------------------------------------*/
 Route::get('/admin_login',[AuthController::class,'viewAdminLogin'])->name('admin.login');
 Route::post('/admin_login',[AuthController::class, 'AdminStoreAuth']);
-
-Route::middleware('auth:admin')->group(function () {
-    //管理者ルーティング
+Route::post('/admin_logout',[AuthController::class,'DestroyAdmin']);
+Route::middleware('auth:admin')->group(function (){
+    Route::get('/admin',[AdminController::class,'ViewAdmin'])->name('admin.auth_complete');
+    Route::post('/admin_delete',[AdminController::class,'DeleteGourmet'])->name('admin.delete_gourmet');
 });

@@ -1,0 +1,14 @@
+
+.delete_button{
+    padding:4px 8px;
+    outline:none;
+    border:none;
+    background: #fc0303;;
+    color:#fff;
+    font-weight:bold;
+    border-radius:3px;
+}
+
+.flex-area{
+    justify-content: end;
+}
