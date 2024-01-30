@@ -32,6 +32,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::post('/register',[AuthController::class,'store']);
+Route::post('/login',[AuthController::class,'login']);
 
 /* ---------- 管理者認証ルーティング -------------------------------------------------------------------------------------------------------------------------*/
 Route::get('/admin_login',[AuthController::class,'viewAdminLogin'])->name('admin.login');
